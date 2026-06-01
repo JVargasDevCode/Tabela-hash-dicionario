@@ -82,7 +82,7 @@ O sistema calcula:
 Compile o programa:
 
 ```bash
-gcc main.c -o dicionario
+gcc Tabela_Hash.c -o dicionario
 ```
 
 Execute:
