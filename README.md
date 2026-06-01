@@ -1,6 +1,6 @@
 # Dicionário com Tabela Hash em C
 
-Projeto foi desenvolvido, para a atividade 3 de Estrutura de Dados, administrado pelos professores Gabriel e João Goku, com objetivo acadamico para apredemos sobre a tabela Hash na linguagem em c.
+Projeto foi desenvolvido para a atividade 3 de Estrutura de Dados, administrado pelos professores Gabriel e João Goku, com objetivo acadamico para apredemos sobre a tabela Hash na linguagem em c.
 
 ##  Objetivo
 
