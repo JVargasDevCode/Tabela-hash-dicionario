@@ -192,25 +192,85 @@ void liberarMemoria() {
 		}
 	}
 }
+int main() {
 
+	inicializarTabela();
+	carregarPalavrasIniciais();
 
-case 4:
-			exibirTabela();
+	int opcao;
+
+	char palavra[50];
+	char definicao[200];
+
+	do {
+
+		printf ("\n------- Dicionario com a tabela Hash ---------\n");
+		printf("1 - Inserir Palavra\n");
+		printf("2 - Buscar Palavra\n");
+		printf("3 - Remover Palavra\n");
+		printf("4 - Exibir Tabela Hash\n");
+		printf("5 - Exibir Estatisticas\n");
+		printf("0 - Sair\n");
+		printf("Opcao: ");
+
+        if(scanf("%d", &opcao) != 1) {
+        printf("Digite apenas numeros!\n");
+
+        while(getchar() != '\n'); 
+        opcao = -1;
+        continue;
+        }
+		switch(opcao) {
+
+        case 1:
+            while(getchar() != '\n');
+            printf("Digite a palavra: ");
+            fgets(palavra, sizeof(palavra), stdin);
+            palavra[strcspn(palavra, "\n")] = '\0';
+        
+            printf("Digite a definicao: ");
+            fgets(definicao, sizeof(definicao), stdin);
+            definicao[strcspn(definicao, "\n")] = '\0';
+        
+            inserir(palavra, definicao);
+        
+            printf("Palavra inserida!\n");
+            break;
+        
+        case 2:
+            while(getchar() != '\n');
+            printf("Digite a palavra: ");
+            fgets(palavra, sizeof(palavra), stdin);
+            palavra[strcspn(palavra, "\n")] = '\0';
+        
+            buscar(palavra);
+            break;
+        
+        case 3:
+            while(getchar() != '\n');
+            printf("Digite a palavra para remover: ");
+            fgets(palavra, sizeof(palavra), stdin);
+            palavra[strcspn(palavra, "\n")] = '\0';
+        
+            removerPalavra(palavra);
+            break;
+            case 4:
+            exibirTabela();
 			break;
 
-		case 5:
+	    	case 5:
 			exibirEstatisticas();
 			break;
 
-		case 0:
+	    	case 0:
 			printf("Sistema encerrado.\n");
 			break;
 
-		default:
+	    	default:
 			printf("Opcao invalida!\n");
 		}
-
-	} while(opcao != 0);
+} 
+  while(opcao != 0);
 	liberarMemoria();
-	return 0;
+ return 0;
 }
